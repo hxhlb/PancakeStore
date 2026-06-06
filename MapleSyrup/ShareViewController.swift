@@ -9,6 +9,7 @@ import UIKit
 import UniformTypeIdentifiers
 
 // thank you for letting me skid this skadz108.
+// you don;t need permission to skid things from your team member? - skadz 6.5.26
 class ShareViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()

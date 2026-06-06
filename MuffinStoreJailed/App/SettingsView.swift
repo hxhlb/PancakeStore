@@ -29,14 +29,14 @@ struct SettingsView: View {
                             }
                             .buttonStyle(TranslucentButtonStyle(color: .discord))
                             Button(action: {
-                                openURL(URL(string: "https://jailbreak.party/discord")!)
+                                openURL(URL(string: "https://github.com/jailbreakdotparty/PancakeStore")!)
                             }) {
                                 ButtonLabel(text: "GitHub", icon: "github", useImage: true)
                             }
                             .buttonStyle(TranslucentButtonStyle(color: .github))
                         }
                         Button(action: {
-                            openURL(URL(string: "https://jailbreak.party/discord")!)
+                            openURL(URL(string: "https://jailbreak.party/")!)
                         }) {
                             ButtonLabel(text: "Website", icon: "globe")
                         }
@@ -89,60 +89,3 @@ struct SettingsView: View {
         }
     }
 }
-/*
-struct SettingsView: View {
-    @Environment(\.dismiss) private var dismiss
-    @Environment(\.openURL) private var openURL
-    
-    var body: some View {
-        NavigationStack {
-            List {
-                Section(header: HeaderLabel(text: "About", icon: "info.circle")) {
-                    VStack(spacing: 12) {
-                        AppInfoCell(imageName: "PancakeStore", title: "PancakeStore", subtitle: "Version \(UIApplication.appVersion ?? "0.0") (\(weOnADebugBuild ? "Debug" : "Release"))")
-                        Button(action: {
-                            Haptic.shared.play(.soft)
-                            openURL(URL(string: "https://jailbreak.party")!)
-                        }) {
-                            ButtonLabel(text: "Website", icon: "globe")
-                        }
-                        .buttonStyle(GlassyButtonStyle(color: .blue))
-                        HStack {
-                            Button(action: {
-                                Haptic.shared.play(.soft)
-                                openURL(URL(string: "https://jailbreak.party/discord")!)
-                            }) {
-                                ButtonLabel(text: "Discord", icon: "discord", isRegularImage: true)
-                            }
-                            .buttonStyle(GlassyButtonStyle(color: .discord))
-                            Button(action: {
-                                Haptic.shared.play(.soft)
-                                openURL(URL(string: "https://github.com/jailbreakdotparty/dirtyZero")!)
-                            }) {
-                                ButtonLabel(text: "GitHub", icon: "github", isRegularImage: true)
-                            }
-                            .buttonStyle(GlassyButtonStyle(color: .gitHub))
-                        }
-                    }
-                }
-                Section(header: HeaderLabel(text: "Credits", icon: "person")) {
-                    LinkCreditCell(image: "mineek", name: "Mineek", text: "Original Project, MuffinStore Jailed.", link: "https://github.com/mineek")
-                    LinkCreditCell(image: "lunginspector", name: "lunginspector (jbdotparty)", text: "UI changes and QoL improvements.", link: "https://github.com/lunginspector")
-                    LinkCreditCell(image: "skadz", name: "Skadz (jbdotparty)", text: "Backend fixes.", link: "https://github.com/skadz108")
-                }
-            }
-            .navigationTitle("Settings")
-            .navigationBarTitleDisplayMode(.inline)
-            .toolbar {
-                ToolbarItem(placement: .topBarTrailing) {
-                    Button(action: {
-                        dismiss()
-                    }) {
-                        Image(systemName: "xmark")
-                    }
-                }
-            }
-        }
-    }
-}
-*/

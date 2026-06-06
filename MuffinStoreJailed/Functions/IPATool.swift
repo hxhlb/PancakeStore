@@ -145,6 +145,7 @@ class StoreClient {
                    let plist = try PropertyListSerialization.propertyList(from: cleanData, options: [], format: nil) as? [String: Any],
                    let urlBag = plist["urlBag"] as? [String: Any],
                    let endpoint = urlBag["authenticateAccount"] as? String {
+                    print("bag: \(endpoint)")
                     return endpoint
                 }
             }
@@ -192,14 +193,17 @@ class StoreClient {
                         return
                     }
                     if let response = response {
-                        //                    print("Response: \(response)")
                         if let response = response as? HTTPURLResponse {
                             print("New URL: \(response.url!)")
                             request.url = response.url
                             
+//                            print(response.allHeaderFields)
+                            
                             if let pod = response.value(forHTTPHeaderField: "pod") {
                                 print("pod gotten: \(pod)")
                                 self.pod = pod
+                            } else {
+                                print("pod not gotten!!?")
                             }
                         }
                     }
