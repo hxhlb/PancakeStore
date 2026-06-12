@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		155F6D562F14A65C00A05FA9 /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 155F6D552F14A65C00A05FA9 /* MobileCoreServices.framework */; };
-		155F6DF22F14AF3F00A05FA9 /* DeviceKit in Frameworks */ = {isa = PBXBuildFile; productRef = 155F6DF12F14AF3F00A05FA9 /* DeviceKit */; };
 		1561ED532F9F01DF008BEC23 /* MapleSyrup.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = 1561ED492F9F01DE008BEC23 /* MapleSyrup.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		15C990E42FA0742F00DF5AEF /* PartyUI in Frameworks */ = {isa = PBXBuildFile; productRef = 15C990E32FA0742F00DF5AEF /* PartyUI */; };
 		435BB1302FD3E8300037A1BB /* PartyUI in Frameworks */ = {isa = PBXBuildFile; productRef = 435BB12F2FD3E8300037A1BB /* PartyUI */; };
@@ -85,7 +84,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				155F6DF22F14AF3F00A05FA9 /* DeviceKit in Frameworks */,
 				155F6D562F14A65C00A05FA9 /* MobileCoreServices.framework in Frameworks */,
 				15C990E42FA0742F00DF5AEF /* PartyUI in Frameworks */,
 				435BB1302FD3E8300037A1BB /* PartyUI in Frameworks */,
@@ -171,7 +169,6 @@
 			packageProductDependencies = (
 				6FA2A8FE2D2426F2005CF73D /* Telegraph */,
 				6FA2A9012D2426F9005CF73D /* Zip */,
-				155F6DF12F14AF3F00A05FA9 /* DeviceKit */,
 				15C990E32FA0742F00DF5AEF /* PartyUI */,
 				435BB12F2FD3E8300037A1BB /* PartyUI */,
 			);
@@ -209,7 +206,6 @@
 			packageReferences = (
 				6FA2A8FD2D2426F2005CF73D /* XCRemoteSwiftPackageReference "Telegraph" */,
 				6FA2A9002D2426F9005CF73D /* XCRemoteSwiftPackageReference "Zip" */,
-				155F6DF02F14AF3F00A05FA9 /* XCRemoteSwiftPackageReference "DeviceKit" */,
 				435BB12E2FD3E8300037A1BB /* XCRemoteSwiftPackageReference "PartyUI" */,
 			);
 			preferredProjectObjectVersion = 77;
@@ -560,14 +556,6 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
-		155F6DF02F14AF3F00A05FA9 /* XCRemoteSwiftPackageReference "DeviceKit" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/devicekit/DeviceKit";
-			requirement = {
-				kind = upToNextMajorVersion;
-				minimumVersion = 5.7.0;
-			};
-		};
 		435BB12E2FD3E8300037A1BB /* XCRemoteSwiftPackageReference "PartyUI" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/jailbreakdotparty/PartyUI";
@@ -595,11 +583,6 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		155F6DF12F14AF3F00A05FA9 /* DeviceKit */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 155F6DF02F14AF3F00A05FA9 /* XCRemoteSwiftPackageReference "DeviceKit" */;
-			productName = DeviceKit;
-		};
 		15C990E32FA0742F00DF5AEF /* PartyUI */ = {
 			isa = XCSwiftPackageProductDependency;
 			productName = PartyUI;

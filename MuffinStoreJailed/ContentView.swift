@@ -7,7 +7,6 @@
 
 import SwiftUI
 import PartyUI
-import DeviceKit
 
 struct ContentView: View {
     @State private var hasShownWelcome: Bool = false
