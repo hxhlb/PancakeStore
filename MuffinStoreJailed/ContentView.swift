@@ -122,7 +122,7 @@ struct ContentView: View {
     }
     
     private var LogsSection: some View {
-        Section(header: HeaderLabel(text: "Logs", icon: "terminal"), footer: Text("Originally created by [mineek](https://github.com/mineek) with backend and QoL enhancements made by [jailbreak.party](https://github.com/jailbreakdotparty).\n[Join the jailbreak.party discord!](https://jailbreak.party/discord)")) {
+        Section(header: HeaderLabel(text: "Logs", icon: "terminal"), footer: Text("Originally created by [mineek](https://github.com/mineek) with QoL improvements and backend fixes made by [jailbreak.party](https://github.com/jailbreakdotparty).")) {
             VStack {
                 TerminalHeader(text: appData.applicationStatus, icon: appData.applicationIcon, color: appData.applicationIconColor)
                 LogView()

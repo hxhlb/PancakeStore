@@ -208,12 +208,13 @@ class StoreClient {
                                 print("pod gotten: \(pod)")
                                 self.pod = pod
                             } else {
-                                print("pod not gotten!!?")
+                                print("failed to get pod!! this breaks everything. try again or maybe use a different apple id?")
                             }
                         }
                     }
                     if let data = data {
                         do {
+//                            print("Data: \(String(data: data, encoding: .utf8))")
                             let resp = try PropertyListSerialization.propertyList(from: data, options: [], format: nil) as! [String: Any]
                             if let dsPersonId = resp["dsPersonId"] as? String, let passwordToken = resp["passwordToken"] as? String, !dsPersonId.isEmpty, !passwordToken.isEmpty {
                                 print("Authentication successful!")
@@ -235,6 +236,9 @@ class StoreClient {
                                 self.accountName = address["firstName"]! + " " + address["lastName"]!
                                 self.saveAuthInfo()
                                 ret = true
+                            } else if (resp["customerMessage"] as! String).contains("Configurator_message") {
+                                print("need 2fa...")
+                                appData.hasSent2FACode = true
                             } else {
                                 print("authentication failed: \(resp["customerMessage"] as! String)")
                                 DispatchQueue.main.async {
@@ -464,11 +468,11 @@ class EncryptedKeychainWrapper {
             kSecAttrTokenID as String: kSecAttrTokenIDSecureEnclave,
             kSecPrivateKeyAttrs as String: [
                 kSecAttrIsPermanent as String: true,
-                kSecAttrApplicationTag as String: "dev.mineek.muffinstorejailed.key",
+                kSecAttrApplicationTag as String: "com.jbdotparty.PancakeStore.key",
                 kSecAttrAccessControl as String: SecAccessControlCreateWithFlags(
                     kCFAllocatorDefault,
                     kSecAttrAccessibleWhenUnlockedThisDeviceOnly,
-                    [.privateKeyUsage, .biometryAny],
+                    [.privateKeyUsage],
                     nil
                 )!
             ]
@@ -490,7 +494,7 @@ class EncryptedKeychainWrapper {
     static func deleteKey() -> Void {
         let query: [String: Any] = [
             kSecClass as String: kSecClassKey,
-            kSecAttrApplicationTag as String: "dev.mineek.muffinstorejailed.key"
+            kSecAttrApplicationTag as String: "com.jbdotparty.PancakeStore.key"
         ]
         SecItemDelete(query as CFDictionary)
     }
@@ -499,7 +503,7 @@ class EncryptedKeychainWrapper {
         let fm = FileManager.default
         let query: [String: Any] = [
             kSecClass as String: kSecClassKey,
-            kSecAttrApplicationTag as String: "dev.mineek.muffinstorejailed.key",
+            kSecAttrApplicationTag as String: "com.jbdotparty.PancakeStore.key",
             kSecReturnRef as String: true
         ]
         var keyRef: CFTypeRef?
@@ -536,7 +540,7 @@ class EncryptedKeychainWrapper {
         let data = fm.contents(atPath: path)!
         let query: [String: Any] = [
             kSecClass as String: kSecClassKey,
-            kSecAttrApplicationTag as String: "dev.mineek.muffinstorejailed.key",
+            kSecAttrApplicationTag as String: "com.jbdotparty.PancakeStore.key",
             kSecReturnRef as String: true
         ]
         var keyRef: CFTypeRef?
