@@ -4,6 +4,10 @@
 A **jailed** app store app downgrader, based off of [MuffinStoreJailed](https://github.com/mineek/MuffinStoreJailed-Public). Supports iOS 16.4+ and does not use any exploits.
 
 [Latest Release](https://github.com/jailbreakdotparty/PancakeStore/releases/latest) • [Support Server](https://jailbreak.party/discord) • [Website](https://jailbreak.party) • [Original Project (by mineek)](https://github.com/mineek/MuffinStoreJailed-Public)
+
+>[!NOTE]
+>**PancakeStore is currently broken due to server changes by Apple.** These issues occur frequently, are relatively unpredictable, and can only be solved by working around the new changes in the code. We do not have the time to fix these always, so if the current build is giving you issues while logging in, unfortunately there is nothing we can do. Please do not ask us for support or alternatives.
+
 >[!WARNING]
 >Use this tool at your own risk! You may lose app data, and other damage could occur.
 
