@@ -73,7 +73,7 @@ struct SettingsView: View {
                 Section(header: HeaderLabel(text: "Credits", icon: "star")) {
                     LinkCreditCell(image: Image("mineek"), name: "mineek", description: "Original creator of MuffinStore Jailed.", url: "https://github.com/mineek")
                     LinkCreditCell(image: Image("lunginspector"), name: "lunginspector", description: "UI changes and QoL improvements.", url: "https://github.com/lunginspector")
-                    LinkCreditCell(image: Image("skadz"), name: "Skadz", description: "Fixed the entire authentication system twice.", url: "https://github.com/skadz108")
+                    LinkCreditCell(image: Image("skadz"), name: "Skadz", description: "Fixed the entire authentication system thrice.", url: "https://github.com/skadz108")
                 }
             }
             .navigationTitle("Settings")

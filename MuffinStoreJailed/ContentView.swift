@@ -68,7 +68,7 @@ struct ContentView: View {
                                     DispatchQueue.main.asyncAfter(deadline: .now() + 0.25) {
                                         EncryptedKeychainWrapper.nuke()
                                         EncryptedKeychainWrapper.generateAndStoreKey()
-                                        sleep(3)
+                                        sleep(1)
                                         exitinator()
                                     }
                                 }) {
@@ -122,7 +122,7 @@ struct ContentView: View {
     }
     
     private var LogsSection: some View {
-        Section(header: HeaderLabel(text: "Logs", icon: "terminal"), footer: Text("Originally created by [mineek](https://github.com/mineek) with QoL improvements and backend fixes made by [jailbreak.party](https://github.com/jailbreakdotparty).")) {
+        Section(header: HeaderLabel(text: "Logs", icon: "terminal"), footer: Text("Originally created by [mineek](https://github.com/mineek) with QoL improvements and backend fixes made by [jailbreak.party](https://github.com/jailbreakdotparty).\nIf you are having issues logging in, please [see here](https://jailbreak.party/pancakestore/authentication).")) {
             VStack {
                 TerminalHeader(text: appData.applicationStatus, icon: appData.applicationIcon, color: appData.applicationIconColor)
                 LogView()

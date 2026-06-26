@@ -179,7 +179,11 @@ class StoreClient {
         Task {
             let authURL = await getBagEndpoint()
             
-            let url = URL(string: authURL)!.appendingPathComponent("fast/")
+            var url = URL(string: authURL)!
+            if !url.hasDirectoryPath {
+                url = url.appending(path: "", directoryHint: .isDirectory)
+            }
+            
             var request = URLRequest(url: url)
             request.httpMethod = "POST"
             request.allHTTPHeaderFields = [
