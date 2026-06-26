@@ -6,7 +6,9 @@ A **jailed** app store app downgrader, based off of [MuffinStoreJailed](https://
 [Latest Release](https://github.com/jailbreakdotparty/PancakeStore/releases/latest) • [Support Server](https://jailbreak.party/discord) • [Website](https://jailbreak.party) • [Original Project (by mineek)](https://github.com/mineek/MuffinStoreJailed-Public)
 
 >[!NOTE]
->**PancakeStore is currently broken due to server changes by Apple.** These issues occur frequently, are relatively unpredictable, and can only be solved by working around the new changes in the code. We do not have the time to fix these always, so if the current build is giving you issues while logging in, unfortunately there is nothing we can do. Please do not ask us for support or alternatives.
+>**Authentication is very unstable.** Due to frequent server changes by Apple, sign-in errors are very common, and these usually must be resolved by an app update.
+>Please don't request support for these issues. It will be fixed eventually.
+>For more information, read [here](https://jailbreak.party/pancakestore/authentication).
 
 >[!WARNING]
 >Use this tool at your own risk! You may lose app data, and other damage could occur.
