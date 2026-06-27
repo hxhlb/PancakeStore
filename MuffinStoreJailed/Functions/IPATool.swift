@@ -181,7 +181,7 @@ class StoreClient {
             
             var url = URL(string: authURL)!
             if !url.hasDirectoryPath {
-                url = url.appending(path: "", directoryHint: .isDirectory)
+                url = url.appending(path: "/")
             }
             
             var request = URLRequest(url: url)
