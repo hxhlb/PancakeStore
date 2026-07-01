@@ -24,8 +24,8 @@
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/jailbreakdotparty/PartyUI",
       "state" : {
-        "revision" : "daafd273cd912513489d56d96fb185f1b8fb9e69",
-        "version" : "0.5.3"
+        "branch" : "main",
+        "revision" : "d952e0063b14fa5beda915b1bbab1231b640defc"
       }
     },
     {

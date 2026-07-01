@@ -10,7 +10,8 @@
 		155F6D562F14A65C00A05FA9 /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 155F6D552F14A65C00A05FA9 /* MobileCoreServices.framework */; };
 		1561ED532F9F01DF008BEC23 /* MapleSyrup.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = 1561ED492F9F01DE008BEC23 /* MapleSyrup.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		15C990E42FA0742F00DF5AEF /* PartyUI in Frameworks */ = {isa = PBXBuildFile; productRef = 15C990E32FA0742F00DF5AEF /* PartyUI */; };
-		435BB1302FD3E8300037A1BB /* PartyUI in Frameworks */ = {isa = PBXBuildFile; productRef = 435BB12F2FD3E8300037A1BB /* PartyUI */; };
+		435C28B42FF4A76700420313 /* PartyUI in Frameworks */ = {isa = PBXBuildFile; productRef = 435C28B32FF4A76700420313 /* PartyUI */; };
+		435C28B72FF4AA4C00420313 /* PartyUI in Frameworks */ = {isa = PBXBuildFile; productRef = 435C28B62FF4AA4C00420313 /* PartyUI */; };
 		6FA2A8FF2D2426F2005CF73D /* Telegraph in Frameworks */ = {isa = PBXBuildFile; productRef = 6FA2A8FE2D2426F2005CF73D /* Telegraph */; };
 		6FA2A9022D2426F9005CF73D /* Zip in Frameworks */ = {isa = PBXBuildFile; productRef = 6FA2A9012D2426F9005CF73D /* Zip */; };
 /* End PBXBuildFile section */
@@ -86,7 +87,8 @@
 			files = (
 				155F6D562F14A65C00A05FA9 /* MobileCoreServices.framework in Frameworks */,
 				15C990E42FA0742F00DF5AEF /* PartyUI in Frameworks */,
-				435BB1302FD3E8300037A1BB /* PartyUI in Frameworks */,
+				435C28B42FF4A76700420313 /* PartyUI in Frameworks */,
+				435C28B72FF4AA4C00420313 /* PartyUI in Frameworks */,
 				6FA2A9022D2426F9005CF73D /* Zip in Frameworks */,
 				6FA2A8FF2D2426F2005CF73D /* Telegraph in Frameworks */,
 			);
@@ -170,7 +172,8 @@
 				6FA2A8FE2D2426F2005CF73D /* Telegraph */,
 				6FA2A9012D2426F9005CF73D /* Zip */,
 				15C990E32FA0742F00DF5AEF /* PartyUI */,
-				435BB12F2FD3E8300037A1BB /* PartyUI */,
+				435C28B32FF4A76700420313 /* PartyUI */,
+				435C28B62FF4AA4C00420313 /* PartyUI */,
 			);
 			productName = MuffinStoreJailed;
 			productReference = 6FA2A8E82D24268F005CF73D /* PancakeStore.app */;
@@ -206,7 +209,7 @@
 			packageReferences = (
 				6FA2A8FD2D2426F2005CF73D /* XCRemoteSwiftPackageReference "Telegraph" */,
 				6FA2A9002D2426F9005CF73D /* XCRemoteSwiftPackageReference "Zip" */,
-				435BB12E2FD3E8300037A1BB /* XCRemoteSwiftPackageReference "PartyUI" */,
+				435C28B52FF4AA4C00420313 /* XCRemoteSwiftPackageReference "PartyUI" */,
 			);
 			preferredProjectObjectVersion = 77;
 			productRefGroup = 6FA2A8E92D24268F005CF73D /* Products */;
@@ -560,12 +563,12 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
-		435BB12E2FD3E8300037A1BB /* XCRemoteSwiftPackageReference "PartyUI" */ = {
+		435C28B52FF4AA4C00420313 /* XCRemoteSwiftPackageReference "PartyUI" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/jailbreakdotparty/PartyUI";
 			requirement = {
-				kind = upToNextMajorVersion;
-				minimumVersion = 0.5.3;
+				branch = main;
+				kind = branch;
 			};
 		};
 		6FA2A8FD2D2426F2005CF73D /* XCRemoteSwiftPackageReference "Telegraph" */ = {
@@ -591,9 +594,13 @@
 			isa = XCSwiftPackageProductDependency;
 			productName = PartyUI;
 		};
-		435BB12F2FD3E8300037A1BB /* PartyUI */ = {
+		435C28B32FF4A76700420313 /* PartyUI */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = 435BB12E2FD3E8300037A1BB /* XCRemoteSwiftPackageReference "PartyUI" */;
+			productName = PartyUI;
+		};
+		435C28B62FF4AA4C00420313 /* PartyUI */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 435C28B52FF4AA4C00420313 /* XCRemoteSwiftPackageReference "PartyUI" */;
 			productName = PartyUI;
 		};
 		6FA2A8FE2D2426F2005CF73D /* Telegraph */ = {

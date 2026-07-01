@@ -180,8 +180,10 @@ class StoreClient {
             let authURL = await getBagEndpoint()
             
             var url = URL(string: authURL)!
-            if !url.hasDirectoryPath {
-                url = url.appending(path: "/")
+            let urlString = url.absoluteString
+            if !urlString.hasSuffix("/") {
+                print("brazil fix")
+                url = URL(string: urlString.appending("/"))!
             }
             
             var request = URLRequest(url: url)
